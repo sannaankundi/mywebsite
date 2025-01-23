@@ -37,6 +37,25 @@ document.addEventListener("DOMContentLoaded", autoType);
 
 // Contact form submission
 document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    alert('Thank you for reaching out, Sannaan will get back to you soon!');
+    event.preventDefault(); // Prevent the default form submission
+
+    // Submit the form using Fetch API
+    fetch(this.action, {
+        method: 'POST',
+        body: new FormData(this),
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('Thank you for reaching out, Sannaan will get back to you soon!');
+            this.reset(); // Clear the form
+        } else {
+            alert('Oops! Something went wrong. Please try again.');
+        }
+    })
+    .catch(error => {
+        alert('Oops! Something went wrong. Please try again.');
+    });
 });
