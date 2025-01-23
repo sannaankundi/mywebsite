@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -39,10 +40,15 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #1abc9c;
 }
 
 .section {
-    padding: 80px 20px;
+    padding: 60px 20px;
     background: #fff;
     margin: 20px 0;
     border-radius: 10px;
@@ -73,11 +79,12 @@ h2 {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill:hover {
     transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .skill i {
@@ -99,6 +106,8 @@ h2 {
 form {
     display: flex;
     flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 form label {
@@ -111,16 +120,20 @@ form input, form textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
 form button {
-    padding: 10px;
+    padding: 10px 20px;
     background: #2c3e50;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
+    transition: background 0.3s ease;
+    width: fit-content;
+    margin: 0 auto;
 }
 
 form button:hover {
@@ -144,8 +157,29 @@ footer .social-links a {
     margin: 0 10px;
     font-size: 1.2rem;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 footer .social-links a:hover {
     color: #1abc9c;
+}
+
+/* Auto-typing Effect */
+#auto-typing {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    margin: 20px 0;
+    height: 60px; /* Fixed height to prevent layout shift */
+}
+
+#auto-typing::after {
+    content: "|";
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
 }
