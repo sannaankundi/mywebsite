@@ -1,5 +1,5 @@
 // Auto-typing effect
-const texts = ["Welcome.", "I'm Ahmad Sannaan Khan.", "A Bio Student.", "An Aspiring Programmer."];
+const texts = ["Welcome.", "I'm Ahmad Sannaan Khan.", "I'm a student, programmer, and creator.", "And this is my portfolio website."];
 let count = 0;
 let index = 0;
 let currentText = "";
