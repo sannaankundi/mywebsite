@@ -168,10 +168,15 @@ footer .social-links a:hover {
 #auto-typing {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #2c3e50;
+    color: #1abc9c; /* Changed to a vibrant color */
     text-align: center;
     margin: 20px 0;
     height: 60px; /* Fixed height to prevent layout shift */
+    background: #2c3e50; /* Background color to match the header */
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 #auto-typing::after {
