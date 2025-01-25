@@ -323,9 +323,10 @@ form button:hover {
 }
 
 /* Currently Learning Section */
+/* Currently Learning Section */
 .video-grid {
     display: grid;
-    grid-template-columns: repeat(2, 2fr); /* 2 video boxes per line */
+    grid-template-columns: repeat(2, 1fr); /* 2 video boxes per line */
     gap: 20px;
     justify-content: center;
 }
