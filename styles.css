@@ -189,13 +189,6 @@ footer .social-links a:hover {
     51%, 100% { opacity: 0; }
 }
 
-
-.about-content {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
 #contact {
     background: #2c3e50;
     color: #fff;
@@ -362,19 +355,20 @@ form button:hover {
     }
 }
 
+/* About Me Section */
 .about-content {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center; /* Center align items */
+    flex-direction: row; /* Side by side on desktop */
+    gap: 40px; /* Space between text and image */
+    align-items: center; /* Center align items vertically */
 }
 
 .about-text {
-    flex: 1;
+    flex: 1; /* Take up remaining space */
 }
 
 .about-image {
-    flex: 1;
+    flex: 1; /* Take up remaining space */
     text-align: center;
 }
 
@@ -386,6 +380,11 @@ form button:hover {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Stack vertically on mobile */
+        gap: 20px; /* Reduce gap for mobile */
+    }
+
     .about-image img {
         max-width: 200px; /* Smaller image size for mobile */
     }
