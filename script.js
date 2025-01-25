@@ -59,3 +59,9 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         alert('Oops! Something went wrong. Please try again.');
     });
 });
+
+const textarea = document.getElementById('message');
+textarea.addEventListener('input', function () {
+    this.style.height = 'auto'; // Reset height
+    this.style.height = (this.scrollHeight) + 'px'; // Expand to fit content
+});

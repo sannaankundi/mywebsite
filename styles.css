@@ -260,10 +260,74 @@ button[type="submit"]:hover {
     background: #16a085;
 }
 
+/* Contact Form */
+#contact {
+    background: #2c3e50;
+    color: #fff;
+}
+
+#contact h2 {
+    color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #fff;
+    color: #333;
+    box-sizing: border-box; /* Ensure consistent sizing */
+}
+
+.form-group textarea {
+    resize: none; /* Disable manual resizing */
+    overflow: hidden; /* Hide scrollbar */
+    min-height: 100px;
+    transition: height 0.2s ease; /* Smooth auto-expand */
+}
+
+form button {
+    padding: 10px 20px;
+    background: #1abc9c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+form button:hover {
+    background: #16a085;
+}
+
+/* Currently Learning Section */
 .video-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
 .video-card {
@@ -271,6 +335,7 @@ button[type="submit"]:hover {
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px; /* Fixed width for consistency */
 }
 
 .video-card:hover {
@@ -278,10 +343,19 @@ button[type="submit"]:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.video-card img {
+.video-thumbnail {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+}
+
+.video-thumbnail iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 150px;
-    object-fit: cover;
+    height: 100%;
+    border: none;
 }
 
 .video-card h3 {
@@ -289,9 +363,4 @@ button[type="submit"]:hover {
     font-size: 1.2rem;
     text-align: center;
     color: #2c3e50;
-}
-
-.video-card a {
-    text-decoration: none;
-    color: inherit;
 }
