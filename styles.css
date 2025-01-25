@@ -375,3 +375,32 @@ form button:hover {
         font-size: 1.2rem; /* Smaller font size for mobile */
     }
 }
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; /* Center align items */
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 250px; /* Smaller image size */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-image img {
+        max-width: 200px; /* Smaller image size for mobile */
+    }
+}
