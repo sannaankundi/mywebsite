@@ -324,8 +324,8 @@ form button:hover {
 
 /* Currently Learning Section */
 .video-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 video boxes per line */
     gap: 20px;
     justify-content: center;
 }
@@ -335,7 +335,7 @@ form button:hover {
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 300px; /* Fixed width for consistency */
+    width: 100%; /* Full width of the grid cell */
 }
 
 .video-card:hover {
@@ -360,7 +360,18 @@ form button:hover {
 
 .video-card h3 {
     margin: 10px;
-    font-size: 1.2rem;
+    font-size: 1.5rem; /* Larger font size */
     text-align: center;
     color: #2c3e50;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: 1fr; /* 1 video box per line on smaller screens */
+    }
+
+    .video-card h3 {
+        font-size: 1.2rem; /* Smaller font size for mobile */
+    }
 }
