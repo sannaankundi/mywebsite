@@ -28,7 +28,14 @@
     <section id="about" class="section">
         <div class="container">
             <h2>About Me</h2>
-            <p>Hello! I'm Ahmad Sannaan Khan, a bio student with a deep passion for programming and computer science. I'm currently exploring the worlds of <strong>cybersecurity</strong> and <strong>software development</strong>, and I'm excited to build a career in these fields.</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Hello! I'm Ahmad Sannaan Khan, a bio student with a deep passion for programming and computer science. I'm currently exploring the worlds of <strong>cybersecurity</strong> and <strong>software development</strong>, and I'm excited to build a career in these fields.</p>
+                </div>
+                <div class="about-image">
+                    <img src="your-image.jpg" alt="Ahmad Sannaan Khan">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -58,38 +65,56 @@
     <section id="learning" class="section">
         <div class="container">
             <h2>Currently Learning</h2>
-            <ul>
-                <li>HTML & CSS for web development</li>
-                <li>JavaScript for interactive web applications</li>
-                <li>C for low-level programming</li>
-                <li>Python for automation and data analysis</li>
-                <li>Bash for scripting and system administration</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="goals" class="section">
-        <div class="container">
-            <h2>Career Goals</h2>
-            <p>I aim to pursue a career in either <strong>cybersecurity</strong> or <strong>software development</strong>. My goal is to combine my analytical mindset with my programming skills to solve real-world problems and contribute to innovative projects.</p>
+            <div class="video-grid">
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=example1" target="_blank">
+                        <img src="html-css-thumbnail.jpg" alt="HTML & CSS Course">
+                        <h3>HTML & CSS</h3>
+                    </a>
+                </div>
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=example2" target="_blank">
+                        <img src="javascript-thumbnail.jpg" alt="JavaScript Course">
+                        <h3>JavaScript</h3>
+                    </a>
+                </div>
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=example3" target="_blank">
+                        <img src="python-thumbnail.jpg" alt="Python Course">
+                        <h3>Python</h3>
+                    </a>
+                </div>
+                <div class="video-card">
+                    <a href="https://www.youtube.com/watch?v=example4" target="_blank">
+                        <img src="bash-thumbnail.jpg" alt="Bash Scripting Course">
+                        <h3>Bash Scripting</h3>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="contact" class="section">
-    <div class="container">
-        <h2>Contact Me</h2>
-        <form id="contact-form" action="https://formspree.io/f/xdkaolrn" method="POST">
-            <input type="hidden" name="_subject" value="New message from your portfolio website!">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </div>
-</section>
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form id="contact-form" action="https://formspree.io/f/xdkaolrn" method="POST">
+                <input type="hidden" name="_subject" value="New message from your portfolio website!">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
 
     <footer>
         <div class="container">
