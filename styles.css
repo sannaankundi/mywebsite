@@ -106,8 +106,10 @@ h2 {
 #contact {
     background: #2c3e50;
     color: #fff;
-    padding: 60px 0; /* Increased padding for more space */
-    margin-bottom: 40px; /* Add space between contact and footer */
+    padding: 10px 0; /* Increased padding for more space */
+    margin-bottom: 10px; /* Add space between contact and footer */
+    padding-bottom: 40px;
+    border-radius: 20px;
 }
 
 #contact h2 {
@@ -125,6 +127,12 @@ form {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth zoom effect */
+}
+
+form:hover {
+    transform: scale(1.05); /* Zoom in the form */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
 }
 
 .form-group {
@@ -188,8 +196,9 @@ footer {
     background: #2c3e50;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 40px; /* Add space above the footer */
+    padding: 10px 0;
+    margin-top: 30px; /* Add space above the footer */
+    border-radius: 2px;
 }
 
 footer .social-links {
