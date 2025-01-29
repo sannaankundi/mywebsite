@@ -74,70 +74,6 @@ h2 {
     color: #2c3e50;
 }
 
-/* Skills Grid */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.skill {
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.skill i {
-    font-size: 2rem;
-    color: #2c3e50;
-    margin-bottom: 10px;
-}
-
-.skill h3 {
-    margin: 10px 0;
-    font-size: 1.5rem;
-}
-
-.skill p {
-    color: #666;
-}
-
-/* Projects Grid */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.project-card {
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.project-card h3 {
-    margin: 10px 0;
-    font-size: 1.5rem;
-}
-
-.project-card p {
-    color: #666;
-}
-
 /* Contact Form */
 #contact {
     background: #2c3e50;
@@ -225,6 +161,53 @@ form button:active {
     transform: translateY(0);
 }
 
+/* Auto-typing Effect */
+#auto-typing-contact {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1abc9c;
+    text-align: center;
+    margin: 20px 0;
+    height: 50px;
+    background: #2c3e50;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+#auto-typing-contact::after {
+    content: "|";
+    position: absolute;
+    right: 10px;
+    animation: blink 1s infinite;
+    color: #1abc9c;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+#auto-typing-contact span {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #1abc9c; }
+}
+
 /* Footer */
 footer {
     background: #2c3e50;
@@ -249,140 +232,4 @@ footer .social-links a {
 
 footer .social-links a:hover {
     color: #1abc9c;
-}
-
-/* Auto-typing Effect */
-#auto-typing{
-    font-size: 2rem;
-    font-weight: bold;
-    color: #1abc9c;
-    text-align: center;
-    margin: 20px 0;
-    height: 50px;
-    background: #2c3e50;
-    padding: 10px 20px;
-    border-radius: 10px;
-    display: inline-block;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-}
-
-#auto-typing::after {
-    content: "|";
-    position: absolute;
-    right: 10px;
-    animation: blink 1s infinite;
-    color: #1abc9c;
-}
-
-@keyframes blink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0; }
-}
-
-#auto-typing span {
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
-}
-
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: #1abc9c; }
-}
-
-/* Currently Learning Section */
-.video-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-content: center;
-}
-
-.video-card {
-    background: #f4f4f4;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
-}
-
-.video-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.video-thumbnail {
-    position: relative;
-    padding-top: 56.25%;
-    overflow: hidden;
-}
-
-.video-thumbnail iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-.video-card h3 {
-    margin: 10px;
-    font-size: 1.5rem;
-    text-align: center;
-    color: #2c3e50;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .video-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .video-card h3 {
-        font-size: 1.2rem;
-    }
-}
-
-/* About Me Section */
-.about-content {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    align-items: center;
-}
-
-.about-text {
-    flex: 1;
-}
-
-.about-image {
-    flex: 1;
-    text-align: center;
-}
-
-.about-image img {
-    max-width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .about-image img {
-        max-width: 200px;
-    }
 }
