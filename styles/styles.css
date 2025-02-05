@@ -358,6 +358,7 @@ footer .social-links a:hover {
     flex-direction: row;
     gap: 40px;
     align-items: center;
+    margin: -40px 0;
 }
 
 .about-text {
@@ -385,4 +386,83 @@ footer .social-links a:hover {
     .about-image img {
         max-width: 200px;
     }
+}
+
+/* GitHub Button */
+.github-button {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.github-button:hover {
+    background: #555;
+    transform: translateY(-2px);
+}
+
+.github-button i {
+    margin-right: 8px;
+}
+
+header .github-button {
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* GitHub Section */
+.github-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.github-section p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Interactive Section */
+#interactive {
+    background: #f9f9f9;
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#interactive .interactive-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#interactive .interactive-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1 1 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#interactive .interactive-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#interactive .interactive-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+#interactive .interactive-box p {
+    color: #666;
 }

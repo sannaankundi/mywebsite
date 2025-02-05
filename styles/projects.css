@@ -150,6 +150,40 @@ h2 {
     50% { border-color: #1abc9c; }
 }
 
+/* GitHub Button */
+.github-button {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.github-button:hover {
+    background: #555;
+    transform: translateY(-2px);
+}
+
+.github-button i {
+    margin-right: 8px;
+}
+
+.github-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.github-section p {
+    margin-top: 10px;
+    margin-bottom: -40px;
+    font-size: 1.1rem;
+    color: #666;
+}
+
 /* Footer */
 footer {
     background: #2c3e50;
