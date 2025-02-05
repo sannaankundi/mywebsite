@@ -33,7 +33,46 @@ function autoType() {
 }
 
 // Start auto-typing effect
-document.addEventListener("DOMContentLoaded", autoType);
+document.addEventListener("DOMContentLoaded", () => {
+    autoType();
+
+    async function fetchRandomQuote() {
+        try {
+            const response = await fetch('https://api.allorigins.win/get?url=https://zenquotes.io/api/random');
+            const data = await response.json();
+            const quoteData = JSON.parse(data.contents);
+            document.getElementById("random-quote").textContent = `${quoteData[0].q} - ${quoteData[0].a}`;
+        } catch (error) {
+            console.error('Error fetching quote:', error);
+        }
+    }
+
+    async function fetchRandomJoke() {
+        try {
+            const response = await fetch('https://official-joke-api.appspot.com/random_joke');
+            const data = await response.json();
+            console.log('Joke data:', data); // Debug log
+            document.getElementById("random-joke").textContent = `${data.setup} ${data.punchline}`;
+        } catch (error) {
+            console.error('Error fetching joke:', error);
+        }
+    }
+
+    async function fetchRandomFunFact() {
+        try {
+            const response = await fetch('https://uselessfacts.jsph.pl/random.json?language=en');
+            const data = await response.json();
+            console.log('Fun fact data:', data); // Debug log
+            document.getElementById("fun-fact").textContent = data.text;
+        } catch (error) {
+            console.error('Error fetching fun fact:', error);
+        }
+    }
+
+    fetchRandomQuote();
+    fetchRandomJoke();
+    fetchRandomFunFact();
+});
 
 // Contact form submission
 document.getElementById('contact-form').addEventListener('submit', function(event) {
