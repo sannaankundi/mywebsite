@@ -48,13 +48,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     async function fetchRandomJoke() {
-        const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-        const targetUrl = 'https://official-joke-api.appspot.com/random_joke';
         try {
-            const response = await fetch(proxyUrl + targetUrl);
+            const response = await fetch('https://api.allorigins.win/get?url=https://official-joke-api.appspot.com/random_joke');
             const data = await response.json();
-            console.log('Joke data:', data); // Debug log
-            document.getElementById("random-joke").textContent = `${data.setup} ${data.punchline}`;
+            const jokeData = JSON.parse(data.contents);
+            document.getElementById("random-joke").textContent = `${jokeData.setup} ${jokeData.punchline}`;
         } catch (error) {
             console.error('Error fetching joke:', error);
         }
