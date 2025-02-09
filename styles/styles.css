@@ -8,11 +8,21 @@ body {
     background-color: #f4f4f4;
 }
 
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
 header {
     background: #2c3e50;
     color: #fff;
     padding: 60px 0;
     text-align: center;
+}
+
+header.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
 }
 
 header h1 {
@@ -29,6 +39,11 @@ nav {
     background: #2c3e50;
     padding: 10px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
 }
 
 nav ul {
@@ -50,7 +65,15 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
+nav.dark-mode ul li a {
+    color: #e0e0e0;
+}
+
 nav ul li a:hover {
+    color: #1abc9c;
+}
+
+nav.dark-mode ul li a:hover {
     color: #1abc9c;
 }
 
@@ -60,6 +83,12 @@ nav ul li a:hover {
     margin: 20px 0;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .section {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid #333;
 }
 
 .container {
@@ -129,6 +158,11 @@ h2 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.project-card.dark-mode {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+}
+
 .project-card h3 {
     margin: 10px 0;
     font-size: 1.5rem;
@@ -142,14 +176,85 @@ h2 {
 #contact {
     background: #2c3e50;
     color: #fff;
-    padding: 60px 0;
+    padding: 20px 0;
     border-radius: 20px;
+    margin-top: 20px;
 }
 
 #contact h2 {
     color: #fff;
     text-align: center;
     margin-bottom: 20px;
+}
+
+.dark-mode #contact {
+    background-color: #1e1e1e !important;
+    color: #e0e0e0 !important;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+.dark-mode #contact form {
+    background-color: #252525 !important;
+    border-radius: 10px;
+    border: 1px solid #444;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode label {
+    color: white !important;
+}
+
+.dark-mode #contact input,
+.dark-mode #contact textarea {
+    background-color: #252525 !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.dark-mode #contact input:focus,
+.dark-mode #contact textarea:focus {
+    outline: none;
+    border-color: #1abc9c;
+}
+
+#interactive.dark-mode{
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid #333;
+}
+
+#about.dark-mode{
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid #333;
+}
+
+.dark-mode .skill {
+    background-color: #252525;
+}
+
+.dark-mode a {
+    color: #1abc9c !important;
+}
+
+.dark-mode .interactive-box {
+    background-color: #252525 !important;
+    color: #e0e0e0 !important;
+}
+
+.dark-mode .video-card {
+    background-color: #252525 !important;
+    color: #e0e0e0 !important;
+}
+
+.dark-mode .video-thumbnail {
+    background-color: #252525 !important;
+    color: #e0e0e0 !important;
 }
 
 form {
@@ -233,6 +338,11 @@ footer {
     padding: 20px 40px 0px 20px;
     margin: 40px 0 0 0;
     border-radius: 2px;
+}
+
+footer.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
 }
 
 footer .social-links {
@@ -349,6 +459,32 @@ footer .social-links a:hover {
 
     .video-card h3 {
         font-size: 1.2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .skills-grid, .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .github-button {
+        font-size: 0.9rem;
     }
 }
 
@@ -472,4 +608,97 @@ header .github-button {
 
 #interactive .interactive-box p {
     color: #666;
+}
+
+/* Dark Mode Toggle Button Styles */
+#dark-mode-toggle {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 5px 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 1rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dark-mode-toggle:hover {
+    background: #555;
+}
+
+#dark-mode-toggle i {
+    margin-right: 5px;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header.dark-mode, nav.dark-mode, footer.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.dark-mode h2 {
+    color: white !important;
+}
+
+.dark-mode h1 {
+    color: white !important;
+}
+
+.dark-mode h3 {
+    color: white !important;
+}
+
+.dark-mode p {
+    color: white !important;
+}
+
+nav.dark-mode ul li a {
+    color: #e0e0e0;
+}
+
+nav.dark-mode ul li a:hover {
+    color: #1abc9c;
+}
+
+.project-card.dark-mode {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .skills-grid, .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .github-button {
+        font-size: 0.9rem;
+    }
 }

@@ -8,11 +8,21 @@ body {
     background-color: #f4f4f4;
 }
 
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
 header {
     background: #2c3e50;
     color: #fff;
     padding: 60px 0;
     text-align: center;
+}
+
+header.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
 }
 
 header h1 {
@@ -29,6 +39,11 @@ nav {
     background: #2c3e50;
     padding: 10px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
 }
 
 nav ul {
@@ -50,16 +65,29 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
+nav.dark-mode ul li a {
+    color: #e0e0e0;
+}
+
 nav ul li a:hover {
     color: #1abc9c;
 }
 
+nav.dark-mode ul li a:hover {
+    color: #1abc9c;
+}
+
 .section {
-    padding: 60px 20px;
+    padding: 20px 20px;
     background: #fff;
     margin: 20px 0;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
 }
 
 .container {
@@ -72,6 +100,10 @@ h2 {
     font-size: 2rem;
     margin-bottom: 20px;
     color: #2c3e50;
+}
+
+.dark-mode h2 {
+    color: white;
 }
 
 /* About Me Section */
@@ -106,6 +138,16 @@ h2 {
 
     .about-image img {
         max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
     }
 }
 
@@ -167,6 +209,11 @@ footer {
     border-radius: 2px;
 }
 
+footer.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
 footer .social-links {
     margin-top: 10px;
 }
@@ -181,4 +228,28 @@ footer .social-links a {
 
 footer .social-links a:hover {
     color: #1abc9c;
+}
+
+/* Dark Mode Toggle Icon Styles */
+#dark-mode-toggle {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 5px 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 1rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dark-mode-toggle:hover {
+    background: #555;
+}
+
+#dark-mode-toggle i {
+    margin-right: 5px;
 }
