@@ -64,8 +64,8 @@ nav ul li a:hover {
 
 .container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    margin: -20px auto;
+    padding: 0px auto;
 }
 
 h2 {
@@ -230,8 +230,8 @@ footer {
     background: #2c3e50;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 30px;
+    padding: 20px 40px 0px 20px;
+    margin: 40px 0 0 0;
     border-radius: 2px;
 }
 
@@ -353,6 +353,13 @@ footer .social-links a:hover {
 }
 
 /* About Me Section */
+
+#about{
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .about-content {
     display: flex;
     flex-direction: row;
