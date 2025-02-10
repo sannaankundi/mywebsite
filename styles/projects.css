@@ -97,6 +97,10 @@ nav.dark-mode ul li a:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.dark-mode a {
+    color: #1abc9c !important;
+}
+
 .section.dark-mode {
     background-color: #1e1e1e;
     color: #e0e0e0;
@@ -316,11 +320,19 @@ nav.dark-mode ul li a:hover {
 }
 
 .dark-mode h2 {
-    color: white;
+    color: white !important;
+}
+
+.dark-mode h1 {
+    color: white !important;
+}
+
+.dark-mode h3 {
+    color: white !important;
 }
 
 .dark-mode p {
-    color: white;
+    color: white !important;
 }
 
 .project-card.dark-mode {

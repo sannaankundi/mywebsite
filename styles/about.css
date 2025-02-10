@@ -103,7 +103,23 @@ h2 {
 }
 
 .dark-mode h2 {
-    color: white;
+    color: white !important;
+}
+
+.dark-mode h1 {
+    color: white !important;
+}
+
+.dark-mode h3 {
+    color: white !important;
+}
+
+.dark-mode p {
+    color: white !important;
+}
+
+.dark-mode a {
+    color: #1abc9c !important;
 }
 
 /* About Me Section */

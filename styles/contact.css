@@ -91,6 +91,26 @@ nav.dark-mode ul li a:hover {
     border: 1px solid #333;
 }
 
+.dark-mode h2 {
+    color: white !important;
+}
+
+.dark-mode h1 {
+    color: white !important;
+}
+
+.dark-mode h3 {
+    color: white !important;
+}
+
+.dark-mode p {
+    color: white !important;
+}
+
+.dark-mode a {
+    color: #1abc9c !important;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -311,14 +331,6 @@ nav.dark-mode ul li a:hover {
 
 #dark-mode-toggle i {
     margin-right: 5px;
-}
-
-.dark-mode h2 {
-    color: white;
-}
-
-.dark-mode p {
-    color: white;
 }
 
 .dark-mode #contact {
