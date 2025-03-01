@@ -29,7 +29,7 @@ Just an normal website. I wanted to create a banger so it may become a banger la
 2. Open index.html in a web browser to view the website.
 3. Navigate through different pages using the navigation menu.
 4. Use the dark mode toggle button to switch between light and dark themes.
-5. Fill out the contact form to send a message to Ahmad.
+5. Fill out the contact form to send me a message.
 
 # Contact
 Feel free to reach out to me through the contact form on the website or connect with me on LinkedIn and/or GitHub.
